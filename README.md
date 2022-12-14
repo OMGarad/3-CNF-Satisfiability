@@ -1,2 +1,3 @@
-# Artificial-Intelligence
-My codes and assignments for the CS F407 course Artificial Intelligence
+## CS F407: Artificial Intelligence
+# Assignment #1
+3-CNF Satisfiability Problem
