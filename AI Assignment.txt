@@ -1,0 +1,36 @@
+AI assignment:
+
+The report will be evaluated based on the 4 questions.
+One question is to try various wasy to improve the algorithm. So we must mentioned what all we have tried,
+results we got and why we chose one way of improving algo over another.
+
+Format should be clear. That's it. Length can be anything.
+
+THE ONLY VARIABLE THING IS NO. OF APPROACHES TRIED.
+
+We have 50 variables in the 3-CNF clause. Hence, we have 2^50 different possible states (each variable can be T or F).
+
+We want to maximize the no. of oercentage of satisfies clauses.
+
+So all the clauses combined have 50 variables. But we want to find a model that maximizes the %age of satisfied clauses
+
+Not all the variables may be used. We may use a few of them. But we will still have T/F values.
+One state is a boolean array of size 50, with truth values assigned to all 50 variables.
+
+In order to make the model(state) that maximizes the no. of satisfied (i.e. true clauses), we use genetic algorithm.
+Fitness function = Percentage of clauses that are satisfied in the 3-CNF sentence.
+
+
+
+
+First, implement the version of the GA algorithm given in the textbook. Assume, that
+initially all the states in the population are uniformly randomly selected from the state
+space. For the first algorithm, let the population size be 20.
+
+The GA starts with k randomly generated states. So in the question, we initialize k to 20.
+
+Next, come up with a variant of the GA algorithm that is able to nd the model having
+the maximum fitness function value as quickly as possible. In other words, you must
+try to improve the algorithm such that the fitness function value is maximized and the
+running time is minimized. To improve the algorithm, you can make changes to any
+aspect of the Genetic Algorithm.

@@ -1,0 +1,31 @@
+1. Instead of repopulating the population from scratch in every iteration, I put the best 2 parents from the
+previous generation in the population and then chose the children.
+
+2. I took the 2 models from the population with the greatest fitnessFunction values. I also multiplied it (fitnesFunction) by 100 and then squared
+it in order to make the higher FF values go higher and lower FF values go lower. So the probability of choosing the best models is higher.
+
+Then, I chose the k samples from the population are chosen at random but the weights are, based on their fitnessFunction values * 100 squared.
+Then pick top 2 from those samples. 
+//But the other method looks to be better considerbaly.
+
+//Also reducing the population doesn't seem to work
+
+
+According to the above facts, too high mutation rate increases the probability of searching more areas in search space, however,
+prevents population to converge to any optimum solution. On the other hand,
+too small mutation rate may result to premature convergence (falling to local optima instead of global optimum).
+
+
+When I tried this technique and lowered the population size, the time required to find the optimal model reduced but the fitnessFunction value 
+wasn't converging to 1 (it wasn't getting that high (like 98 or 99)).
+
+
+When I just selected the parents weightedly based on the fitnessFunction values I was getting similar to better results but with a bit more time.
+So, I reduced population size to 15 and it improved the model.
+
+When I chose the optimal COP then the computation time increased but the fitnessFunction value converged more.
+If I tried to reduce size of population to make it faster, the FF value decreased on average.
+
+
+
+
